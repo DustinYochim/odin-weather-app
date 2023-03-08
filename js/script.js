@@ -76,7 +76,7 @@ function convertTo12HourTime(time) {
 
 function renderWeatherForecast(forecastData) {
   const forecastDiv = document.querySelector("#forecast");
-  forecastDiv.textContent = "3 Hour Forecast";
+  // forecastDiv.textContent = "3 Hour Forecast";
   for (let i = 0; i < 5; i++) {
     const date = forecastData.list[i].dt_txt;
     const time = date.split(" ")[1];
@@ -89,8 +89,14 @@ function renderWeatherForecast(forecastData) {
     const forecastTemp = document.createElement("div");
     forecastTemp.classList.add("forecast-temp");
     forecastTemp.textContent = `${Math.round(forecastData.list[i].main.temp)}°`;
+    const forecastIcon = document.createElement("img");
+    forecastIcon.classList.add("forecast-icon");
+    forecastIcon.src = `https://openweathermap.org/img/w/${forecastData.list[i].weather[0].icon}.png`;
+
     forecastItem.appendChild(forecastTime);
+    forecastItem.appendChild(forecastIcon);
     forecastItem.appendChild(forecastTemp);
+
     forecastDiv.appendChild(forecastItem);
   }
 }

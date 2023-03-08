@@ -85,8 +85,13 @@ footer a {
 }
 
 /* Forecast */
-.forecast {
+
+.forecast-heading {
   margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.forecast {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +99,8 @@ footer a {
   gap: 1rem;
   background: rgba(0, 0, 0, 0.2);
   width: 80%;
-  padding: 1rem;
+  max-width: 700px;
+  padding: 3rem;
   border-radius: 10px;
 }
 
@@ -103,7 +109,7 @@ footer a {
   border-radius: 5px;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
