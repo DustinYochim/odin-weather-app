@@ -9,5 +9,25 @@
     <script src="./js/script.js" defer></script>
     <title>Weather</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 class="location-header" id="locationHeader">Odin Weather</h1>
+    </header>
+    <main>
+      <div class="current-weather">
+        <div class="current-weather-temp" id="currentTemp"></div>
+        <img class="current-weather-icon" id="currentWeatherIcon" />
+      </div>
+      <div class="daily-weather"></div>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" />
+      <button id="locationButton">Search</button>
+    </main>
+    <footer>
+      <a href="https://github.com/DustinYochim"
+        >Created by Dustin Yochim <img src="./img/github.svg" alt="GitHub"
+      /></a>
+    </footer>
+  </body>
 </html>

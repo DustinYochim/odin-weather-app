@@ -1,0 +1,98 @@
+/* Sitewide Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Alata";
+  src: url("../fonts/Alata/Alata-Regular.ttf");
+}
+
+body {
+  font-family: "Alata", "Roboto", sans-serif;
+  font-size: 16px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 5rem 0 1rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.898);
+}
+main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer {
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.current-weather {
+  display: flex;
+  align-items: center;
+}
+.current-weather-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.current-weather-temp {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+input[type="text"] {
+  background: rgba(255, 255, 255, 0.467);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 0.25rem;
+  display: none;
+}
+button {
+  display: none;
+}
+label {
+  display: none;
+}
+
+body.cloudy {
+  background: url("../img/cloudy.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.sunny {
+  background: url("../img/sunny.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.rainy {
+  background: url("../img/rainy.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
