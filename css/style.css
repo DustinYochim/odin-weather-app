@@ -34,6 +34,15 @@ header {
   text-align: center;
   color: rgba(255, 255, 255, 0.898);
 }
+
+.hamburger-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
 main {
   flex: 1;
 
@@ -84,7 +93,7 @@ footer a {
 /* Forecast */
 
 .forecast-heading {
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -117,8 +126,14 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+}
+
+.search.hidden {
+  display: none;
 }
 
 .search input {
@@ -156,5 +171,10 @@ body.sunny {
 
 body.rainy {
   background: url("../img/rainy.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.snowy {
+  background: url("../img/snowy.jpeg") no-repeat center center fixed;
   background-size: cover;
 }

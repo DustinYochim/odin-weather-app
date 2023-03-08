@@ -3,6 +3,8 @@
 
 const locationInput = document.querySelector("#location");
 const locationButton = document.querySelector("#locationButton");
+const hamburgerButton = document.querySelector("#hamburgerButton");
+const search = document.querySelector("#search");
 
 function renderLocationHeader(weatherData) {
   const locationHeader = document.querySelector("#locationHeader");
@@ -31,6 +33,8 @@ function renderBackground(weatherData) {
     body.classList.add("rainy");
   } else if (description.includes("clear")) {
     body.classList.add("sunny");
+  } else if (description.includes("snow")) {
+    body.classList.add("snowy");
   } else {
     body.classList.add("sunny");
   }
@@ -49,10 +53,6 @@ function renderCurrentWeather(weatherData) {
   renderCurrentTemp(weatherData);
   setCurrentWeatherDescription(weatherData);
   setTodayHighAndLowTemp(weatherData);
-}
-function locationButtonClick() {
-  if (locationInput.value === "") return;
-  getWeather(locationInput.value);
 }
 
 async function getWeather(location = "Barnhart") {
@@ -77,7 +77,7 @@ function convertTo12HourTime(time) {
 function renderWeatherForecast(forecastData) {
   const forecastDiv = document.querySelector("#forecast");
   // forecastDiv.textContent = "3 Hour Forecast";
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     const date = forecastData.list[i].dt_txt;
     const time = date.split(" ")[1];
     const twelveHourTime = convertTo12HourTime(time);
@@ -110,6 +110,18 @@ async function getWeatherForecast(location = "Barnhart") {
   renderWeatherForecast(forecastData);
 }
 
+function hamburgerClick() {
+  search.classList.toggle("hidden");
+}
+
+function locationButtonClick() {
+  if (locationInput.value === "") return;
+  getWeather(locationInput.value);
+  getWeatherForecast(locationInput.value);
+  search.classList.toggle("hidden");
+}
+
+hamburgerButton.addEventListener("click", hamburgerClick);
 locationButton.addEventListener("click", locationButtonClick);
 
 getWeather();

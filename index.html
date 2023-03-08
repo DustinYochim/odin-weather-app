@@ -11,6 +11,10 @@
   </head>
   <body>
     <header>
+      <button class="hamburger-button" id="hamburgerButton">
+        <img src="./img/hamburger.svg" alt="menu" />
+      </button>
+
       <h1 class="location-header" id="locationHeader">Odin Weather</h1>
     </header>
     <main>
@@ -33,7 +37,7 @@
       <div class="forecast" id="forecast"></div>
 
       <!-- Search -->
-      <div class="search">
+      <div class="search hidden" id="search">
         <!-- <label for="location">Location</label> -->
         <input type="text" id="location" placeholder="New Location" />
         <button id="locationButton">Search</button>
