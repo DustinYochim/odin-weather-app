@@ -39,6 +39,7 @@ main {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 footer {
@@ -46,6 +47,7 @@ footer {
   text-align: center;
   margin-top: auto;
 }
+
 footer a {
   color: white;
   text-decoration: none;
@@ -63,11 +65,6 @@ footer a {
   align-items: center;
   gap: 0.5rem;
 }
-/* .current-weather-icon {
-  height: 100px;
-  width: 100px;
-  background-color: rgba(0, 0, 0, 0.8);
-} */
 
 .current-weather-temp {
   font-size: 5rem;
@@ -116,19 +113,35 @@ footer a {
   width: 100%;
 }
 
-input[type="text"] {
-  background: rgba(255, 255, 255, 0.467);
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.search input {
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.25);
   color: white;
-  padding: 0.25rem;
-  display: none;
 }
-button {
-  display: none;
+
+.search input::placeholder {
+  color: white;
 }
-label {
-  display: none;
+
+.search button {
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
 }
 
 body.cloudy {
