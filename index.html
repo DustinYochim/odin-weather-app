@@ -14,11 +14,22 @@
       <h1 class="location-header" id="locationHeader">Odin Weather</h1>
     </header>
     <main>
+      <!-- Current Weather -->
       <div class="current-weather">
         <div class="current-weather-temp" id="currentTemp"></div>
         <img class="current-weather-icon" id="currentWeatherIcon" />
+        <div
+          class="current-weather-description"
+          id="currentWeatherDescription"
+        ></div>
+        <div class="today-high-low-temp">
+          <div class="today-high-temp" id="todayHighTemp">H: 55°</div>
+          <div class="today-low-temp" id="todayLowTemp">L: 30°</div>
+        </div>
       </div>
-      <div class="daily-weather"></div>
+
+      <!-- Forecast -->
+      <div class="forecast" id="forecast"></div>
 
       <label for="location">Location</label>
       <input type="text" id="location" />
