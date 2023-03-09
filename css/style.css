@@ -37,8 +37,8 @@ header {
 
 .hamburger-button {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1rem;
+  left: 1rem;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -48,7 +48,7 @@ main {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 footer {
@@ -94,8 +94,9 @@ footer a {
 
 .forecast-heading {
   margin-top: 5rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: -2rem;
+  font-size: 1.25rem;
+  z-index: 2;
 }
 .forecast {
   display: flex;
@@ -104,8 +105,8 @@ footer a {
   align-items: center;
   gap: 1rem;
   background: rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 700px;
+  /* width: 80%; */
+  /* max-width: 700px; */
   padding: 3rem;
   border-radius: 10px;
 }
@@ -116,9 +117,9 @@ footer a {
   padding: 1rem;
   display: flex;
   /* flex-direction: column; */
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  /* gap: 1rem; */
   width: 100%;
 }
 
@@ -177,4 +178,18 @@ body.rainy {
 body.snowy {
   background: url("../img/snowy.jpeg") no-repeat center center fixed;
   background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .forecast {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .forecast-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

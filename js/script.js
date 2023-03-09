@@ -77,7 +77,7 @@ function convertTo12HourTime(time) {
 function renderWeatherForecast(forecastData) {
   const forecastDiv = document.querySelector("#forecast");
   // forecastDiv.textContent = "3 Hour Forecast";
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 8; i++) {
     const date = forecastData.list[i].dt_txt;
     const time = date.split(" ")[1];
     const twelveHourTime = convertTo12HourTime(time);
